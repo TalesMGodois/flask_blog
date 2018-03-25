@@ -9,3 +9,6 @@ __pycache_
 .idea
 venv
 *.iml
+.vscode
+out
+
