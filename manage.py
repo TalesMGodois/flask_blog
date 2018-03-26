@@ -19,8 +19,8 @@ def run_server():
     return Server(
         use_debugger = True,
         use_reloader = True,
-        host = os.getenv('IP', '0.0.0.0'),
-        port = int(os.getenv('PORT', 3000))
+        host=os.getenv('IP', '0.0.0.0'),
+        port=int(os.getenv('PORT', 3000))
     )
 
 if __name__ == '__main__':
