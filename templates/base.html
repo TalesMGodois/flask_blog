@@ -14,12 +14,21 @@
         <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
     </head>
     <body>
+
         <div class="container">
+            {% if session.username %}
+            <p align="right">
+                <a href="/logout">Logout</a>
+            </p>
+
+            {% endif %}
             {% block content %}
 
             {% endblock %}
 
         </div>
+
+
 
         <!--Jquery-->
         <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>

@@ -5,7 +5,7 @@ from wtforms.fields.html5 import EmailField
 
 class RegisterForm(Form):
     fullname = StringField('Full Name', [validators.Required()])
-    email = EmailField('Email', [validators.Required()])
+    email = EmailField('Email', [validators.Required(), validators.Email()])
 
     username = StringField('Username',[
         validators.Required()
@@ -17,3 +17,15 @@ class RegisterForm(Form):
     ])
 
     confirm = PasswordField('Confirm Password')
+
+class LoginForm(Form):
+    username = StringField('Username',[
+        validators.Required(),
+        validators.Length(min=4,max=25)
+    ])
+
+    password = PasswordField('Password',[
+        validators.Required(),
+        validators.Length(min=4, max=80)
+    ])
+
