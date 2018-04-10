@@ -3,9 +3,8 @@ import os, sys
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 
 from flask_script import Manager, Server
-from flask_blog import app
+from flask_blog import app, db
 from flask_migrate import MigrateCommand
-from flask_blog import db
 
 manager = Manager(app)
 

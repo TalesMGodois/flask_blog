@@ -9,3 +9,5 @@ BLOG_DATABASE_NAME = 'blog'
 DB_HOST = os.getenv('IP', '0.0.0.0')
 SQLALCHEMY_DATABASE_URI = 'mysql+pymysql://%s:%s@%s/%s' %(DB_USERNAME, DB_PASSWORD, DB_HOST, BLOG_DATABASE_NAME)
 SQLALCHEMY_TRACK_MODIFICATIONS = True
+UPLOADED_IMAGES_DEST = '/Users/talesmarinho/techprojetos/_python/study/flask_blog/static/images'
+UPLOADED_IMAGES_URL = '/static/images/'
