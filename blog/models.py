@@ -26,9 +26,11 @@ class Post(db.Model):
     publish_date = db.Column(db.DateTime)
     live = db.Column(db.Boolean)
 
-    blog = db.Column(db.Integer, db.ForeignKey('blog.id'))
-    author = db.Column(db.Integer, db.ForeignKey('author.id'))
-    category = db.Column(db.Integer, db.ForeignKey('category.id'))
+    blog_id = db.Column(db.Integer, db.ForeignKey('blog.id'))
+
+    author_id = db.Column(db.Integer, db.ForeignKey('author.id'))
+
+    category_id = db.Column(db.Integer, db.ForeignKey('category.id'))
 
     @property
     def imgsrc(self):

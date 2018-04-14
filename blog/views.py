@@ -135,7 +135,7 @@ def edit(post_id):
     if form.validate_on_submit():
         original_image = post.image
         form.populate_obj(post)
-        if form.image.has_file():
+        if form.image.data:
             image = request.files.get('image')
             try:
                 filename = uploaded_images.save(image)
@@ -168,7 +168,7 @@ def delete(post_id):
     post.live = False
     db.session.commit()
     flash("Article Deleted")
-    return redirect('/admin')
+    return redirect('/index')
 
 
 def getAction(action):
